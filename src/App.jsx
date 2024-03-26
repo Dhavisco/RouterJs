@@ -3,6 +3,7 @@ import './App.css'
 import HomePage from './pages/Home'
 import Product from './pages/Product'
 import RootLayout from './pages/Root'
+import ProductDetailsPage from './pages/ProductDetails'
 
 // const routeDefinitions = createRoutesFromElements(
 //   <Route>
@@ -16,7 +17,8 @@ import RootLayout from './pages/Root'
 const router = createBrowserRouter([
   {path: '/' , element: <RootLayout/>, children: [
   { path: '/', element:<HomePage/>},
-  {path:'/products', element: <Product/>}
+  {path:'/products', element: <Product/>},
+  {path:'/products/:productId', element:<ProductDetailsPage/>}
   ]}
   
 ])
